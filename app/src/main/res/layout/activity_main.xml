@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    tools:context=".MainActivity"
+    tools:ignore="HardCodedText">
+
+    <TextView
+        android:id="@+id/activityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="casual"
+        android:text="Alert Dialog, level 1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/defaultDialogue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Alert Dialog (default)"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityTitle" />
+
+    <Button
+        android:id="@+id/singleChoiceDialogue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Alert Dialogue (single choice)"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/defaultDialogue" />
+
+    <Button
+        android:id="@+id/singleChoiceDialogueWithConfirmation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Alert Dialogue (single choice with confirmation)"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/singleChoiceDialogue" />
+
+    <Button
+        android:id="@+id/multipleChoiceDialogue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Alert Dialogue (multiple choice)"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/singleChoiceDialogueWithConfirmation" />
+
+    <Button
+        android:id="@+id/multipleChoiceDialogueWithConfirmation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Alert Dialogue (multiple choice with confirmation)"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multipleChoiceDialogue" />
+
+    <TextView
+        android:id="@+id/currentVolumeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:fontFamily="casual"
+        android:text="Current Volume: 50%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multipleChoiceDialogueWithConfirmation" />
+
+    <TextView
+        android:id="@+id/currentColorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="casual"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:text="Current Color:"
+        app:layout_constraintEnd_toStartOf="@+id/colorView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentVolumeTextView" />
+
+    <View
+        android:id="@+id/colorView"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="#f00"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@+id/currentColorTextView"
+        app:layout_constraintTop_toTopOf="@+id/currentColorTextView"
+        app:layout_constraintBottom_toBottomOf="@id/currentColorTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

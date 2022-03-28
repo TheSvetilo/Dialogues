@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Dialogues</string>
+    <string name="volume_description">Volume: %1$d%%</string>
+    <string name="current_volume">Current Volume: %1$d%%</string>
+
+    <string-array name="colors">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+    </string-array>
+</resources>
